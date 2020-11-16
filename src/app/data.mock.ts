@@ -1,7 +1,7 @@
 import * as Types from './types';
 
 export const profile: Types.Profile = {
-  description: 'Olá! Sou Lucas Vasconcelos, nascido, criado e residente em Natal/RN. Sou uma pessoa bem humorada, flexível e com fácil adaptação à novas situações. Em 2013, concluí a graduação em Engenharia de Computação pela UFRN e atuei em projetos de iniciação científica e também como Tutor EaD. Meu primeiro contato com o mundo do software foi desenvolvendo um sistema para controle de oficina e estoque (Delphi) e emissão de NF-e (Java). Também implementei um projeto piloto para gestão de restaurantes. Atualmente, sou Analista de Sistemas e trabalho com software acadêmico utilizado por diversas instituições de ensino federais e estaduais em todo o Brasil.'
+  description: 'Olá! Nascido, criado e residente em Natal/RN, sou uma pessoa bem humorada, flexível e aberta a mudanças. Ainda no ensino médio, tive meu primeiro contato com o mundo do software desenvolvendo um sistema para controle de oficina e estoque (Delphi 7) e emissão de NF-e (Java). Após a graduação, atuei no meio acadêmico por alguns anos. Também implementei um projeto piloto para gestão de restaurantes. Atualmente, sou Analista de Sistemas e trabalho com um software acadêmico utilizado por diversas Instituições de Ensino Superior em todo o Brasil.'
 };
 
 export const experiences: Array<Types.Experience> = [

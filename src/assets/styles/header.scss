@@ -1,0 +1,111 @@
+header {
+  display: grid;
+  grid: 'avatar profile'
+        'contact contact';
+  position: relative;
+
+  .avatar {
+    grid-area: avatar;
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+    margin-left: -40px;
+    margin-right: 40px;
+
+    .photo {
+      max-width: 250px;
+      background-size: cover;
+    }
+  }
+
+  .name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    background-color: #169dc5;
+    opacity: 0.8;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    
+    .name {
+    font-weight: bold;
+    margin: 0px;
+    font-size: 20px;
+    line-height: 1em;
+    color: white;
+    }
+    
+    .role {
+      color: white;
+    }
+  }
+
+  .profile {
+    grid-area: profile;
+  }
+
+  .contact {
+    grid-area: contact;
+    
+    .contact-list {
+      padding: 0px;
+      margin: 0px 0px 0px 0px;
+      display: grid;
+      grid: 'qrcode email'
+      'qrcode whatsapp'
+      'qrcode github'
+      'qrcode linkedin'
+      'qrcode address';
+    }
+
+    .contact-list li {
+      margin-bottom: 5px;
+    }
+    
+    .contact-list li .icon {
+      width: 24px;
+      margin-right: 5px;
+      
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .contact-list li .icon i {
+      color: #169dc5;
+      font-size: 1.2em;
+    }
+    
+    .qrcode {
+      grid-area: qrcode;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .qrcode img {
+      max-width: 130px;
+    }
+
+    .address {
+      grid-area: address;
+    }
+    
+    .email {
+      grid-area: email;
+    }
+
+    .whatsapp {
+      grid-area: whatsapp;
+    }
+    
+    .github {
+      grid-area: github;
+    }
+    
+    .linkedin {
+      grid-area: linkedin;
+    }
+  }
+}
