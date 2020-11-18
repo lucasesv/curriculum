@@ -1,0 +1,91 @@
+main {}
+main > #section-container {}
+
+.loading-bar {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 1;
+}
+
+#section-container section {
+	background-color: $background-color;
+	color: #eee;
+}
+#section-container section > header {
+	display: block;
+	margin-bottom: 40px;
+	/*width: 300px;*/
+}
+#section-container section > header > .header-icon {
+	display: inline-block;
+	padding: 10px 15px;
+	margin: 0px;
+	font-size: 1.3em;
+	color: $primary-color;
+	border-bottom: solid 1px $primary-color;
+}
+#section-container section > header > .header-title {
+	display: inline-block;
+	margin: 0px;
+	padding: 10px 20px 10px 0px;
+	font-size: 1.3em;
+	font-weight: 400;
+	color: $primary-color;
+	border-bottom: solid 1px $primary-color;
+}
+
+@media screen and (min-width: 950px) {
+	main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		height: 100vh;
+		/*background-image: url('/assets/images/background.jpg');*/
+		/*background-position: center;*/
+		overflow: hidden;
+	}
+
+	main > #section-container {
+		position: relative;
+	}
+
+	#section-container section {
+		position: absolute;
+		top: -265px; /* Metade do height */
+		left: -475px; /* Metade do width */
+		padding: 0px 40px 40px 40px;
+		width: 950px;
+		height: 545px;
+		/*background-color: #222;*/
+		/*color: #eee;*/
+		font-weight: 100;
+		overflow-y: auto;
+		opacity: 1;
+	}
+	#section-container section > header {
+		/*display: block;*/
+		margin-left: -40px; /* Compensa o padding do section */
+		/*margin-bottom: 40px;*/
+		width: 300px;
+	}
+	#section-container section > header > .header-icon {
+		/*display: inline-block;
+		padding: 10px 15px;
+		margin: 0px;
+		font-size: 1.3em;
+		color: $primary-color;
+		border-bottom: solid 1px $primary-color;*/
+	}
+	#section-container section > header > .header-title {
+		/*display: inline-block;
+		margin: 0px;
+		font-size: 1.3em;
+		padding: 10px 20px 10px 0px;
+		color: $primary-color;
+		font-weight: 400;
+		border-bottom: solid 1px $primary-color;*/
+	}
+}

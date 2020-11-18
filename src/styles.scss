@@ -1,199 +1,84 @@
-@import './assets/styles/header.scss';
+/* You can add global styles to this file, and also import other style files */
+/*@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/*@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';*/
+/*@import '~@angular/material/prebuilt-themes/purple-green.css';*/
+
+/*@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://www.google.com/design/spec/style/color.html
+$candy-app-primary: mat-palette($mat-light-green, 500);
+$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$candy-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($candy-app-theme);*/
+
+
+$primary-color: #27c74f;
+$background-color: #20222b;
+
+
+@import './assets/scss/transitions.scss';
+@import './assets/scss/header.scss';
+@import './assets/scss/main.scss';
+@import './assets/scss/home.scss';
+@import './assets/scss/about-me.scss';
+@import './assets/scss/graduation.scss';
+@import './assets/scss/skills.scss';
+@import './assets/scss/experience.scss';
+@import './assets/scss/contact.scss';
 
 * {
-  box-sizing: border-box;
-  font-family: 'Titillium Web', sans-serif;
-  color: #323234;
-  -webkit-print-color-adjust: exact;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: #313131;
-  margin: 0px;;
+	margin: 0px;
+	font-family: 'Titillium Web', 'Open Sans', 'Roboto', sans-serif;
+	color: #eee;
+	background-color: $background-color;
+	/*overflow-y: hidden;*/
+	overflow-x: hidden;
 }
 
-section {
-  margin-bottom: 40px;
-}
-
-ul {
-  padding: 0px;
-  margin: 0px;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #169dc5;
-  /* font-weight: bold; */
-}
-
-.site-wrapper {
-  /* padding-top: 20px; */
-  background-color: #e6e6e6;
-  max-width: 1000px;
-  /* border: 1px solid grey; */
-  margin: auto;
-  width: 210mm;
-  padding-left: 40px;
-  padding-right: 40px;
+app-root {
+	display: block;
+	height: 100vh;
 }
 
 
-
-.content-wrapper {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  column-gap: 40px;
-  /* padding-left: 40px;
-  padding-right: 40px; */
+/*******************************
+* Scrolling
+*******************************/
+*::-webkit-scrollbar-track
+{
+	/*-webkit-box-shadow: inset 0 0 6px blue;*/
+	/*background-color: rgba(255,255,255,0.1);*/
 }
 
-section p {
-  margin: 0px;
+*::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: rgba(255, 255, 255, 0.19);
 }
 
-section .title {
-  margin: 0px 0px 15px 0px;
-  color: #323234;
-  font-size: 1.6em;
-  display: flex;
-  align-items: center;
-}
-
-section .title hr {
-  width: 100%;
-  height: 1px;
-  margin-left: 50px;
-  border: solid 1px grey;
-  border-top: none;
-}
-
-section ul.career-list li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-section ul.career-list li .job {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 30px;
-  text-align: right;
-  min-width: 200px;
-  max-width: 200px;
-}
-
-section ul.career-list li .job .role {
-  display: block;
-  color: #169dc5;
-  font-weight: bold;
-}
-
-section ul.career-list li .job-details {
-
-}
-
-section ul.career-list li .job-details .company {
-  font-weight: bold;
-}
-
-section ul.career-list li .job-details .description {
-  margin-top: 0px;
-  font-style: italic;
-}
-
-section ul.skills li {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-section ul.skills li .name {
-  /* flex: 45%; */
-  font-weight: bold;
-}
-
-section ul.skills li .knowledge {
-  /* flex: 55%; */
-  /* width: 100%; */
-  display: flex;
-  align-items: center;
-}
-
-section ul.skills li .knowledge .progress-bar {
-  width: 100%;
-  background-color: #6b6b6b;
-}
-
-section ul.skills li .knowledge .progress-bar .progress {
-  height: 12px;
-  background-color: #169dc5;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w10 {
-  width: 10%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w20 {
-  width: 20%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w30 {
-  width: 30%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w40 {
-  width: 40%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w50 {
-  width: 50%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w60 {
-  width: 60%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w70 {
-  width: 70%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w80 {
-  width: 80%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w90 {
-  width: 90%;
-}
-
-section ul.hobbies  {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-section ul.hobbies li {
-  flex: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-section ul.hobbies li .icon {
-  /* flex: 50%; */
-  font-size: 4em;
-  color: #169dc5;
-}
-
-
-@media print {
-  .site-wrapper {
-    height: 200vh;
-    background-color: #e6e6e6;
-  }
+*::-webkit-scrollbar-thumb
+{
+	background-color: rgba(255, 255, 255, 0.2);
 }

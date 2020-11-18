@@ -117,6 +117,26 @@ export const softSkills: Array<Types.Skill> = [
   {
     name: 'Liderança',
     knowledge: 50
+  },
+  {
+    name: 'Organização',
+    knowledge: 80
+  },
+  {
+    name: 'Bom Humor',
+    knowledge: 80
+  },
+  {
+    name: 'Adaptabilidade',
+    knowledge: 70
+  },
+  {
+    name: 'Honestidade e Integridade',
+    knowledge: 100
+  },
+  {
+    name: 'Competitividade',
+    knowledge: 70
   }
 ];
 

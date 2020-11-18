@@ -1,0 +1,29 @@
+/*.section-showing {
+	animation: slide-right-showing .35s 1;
+	animation-fill-mode: forwards;
+}
+.section-hiding {
+	animation: slide-right-hiding .35s 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-right-showing {
+	from {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes slide-right-hiding {
+	from {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+}*/

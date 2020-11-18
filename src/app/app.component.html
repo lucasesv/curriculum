@@ -1,119 +1,257 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div class="site-wrapper">
-    <header>
-      <div class="avatar">
-        <img class="photo" src="../assets/images/photo1.jpg" alt="Lucas Vasconcelos">
-        <div class="name-wrapper">
-          <h3 class="name">LUCAS VASCONCELOS</h3>
-          <span class="role">Analista de Sistemas</span>
+<header id="site-header" [ngClass]="{'menu-opened': menuOpened}">
+  
+  <nav id="site-menu" [ngClass]="{'menu-opened': menuOpened}">
+    <div class="menu-title" (click)="onOpenMenu()">
+      <div class="icon">
+        <div class="h-bar"></div>
+        <div class="h-bar"></div>
+        <div class="h-bar"></div>
+        <div class="h-bar"></div>
+        <!-- <i class="fas fa-bars"></i> -->
+      </div>
+      <p class="title">Lucas Vasconcelos</p>
+    </div>
+    <ul>
+      <li (click)="onChangeSection('about-me')">
+        <i class="menu-icon fas fa-user fa-fw"></i>
+        <span class="menu-caption">Sobre mim</span>
+      </li>
+      <li (click)="onChangeSection('graduation')">
+        <i class="menu-icon fas fa-graduation-cap fa-fw"></i>
+        <span class="menu-caption">Formação</span>
+      </li>
+      <li (click)="onChangeSection('experience')">
+        <i class="menu-icon fas fa-briefcase fa-fw"></i>
+        <span class="menu-caption">Experiência</span>
+      </li>
+      <li (click)="onChangeSection('skills')">
+        <i class="menu-icon fas fa-book fa-fw"></i>
+        <span class="menu-caption">Skills</span>
+      </li>
+      <li (click)="onChangeSection('contact')">
+        <i class="menu-icon fas fa-envelope fa-fw"></i>
+        <span class="menu-caption">Contato</span>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <i class="menu-icon fas fa-file-pdf fa-fw"></i>
+        <a href="/assets/downloads/lucas-vasconcelos-curriculo.pdf" target="_blank" class="menu-caption">Versão em PDF</a>
+      </li>
+    </ul>
+  </nav>
+  
+</header>
+
+<main>
+  <div id="section-container">
+    
+    <section id="section-about-me" *ngIf="activeSection == 'about-me'" [@sectionState]>
+      <header>
+        <span class="header-icon"><i class="fas fa-user fa-fw"></i></span><h1 class="header-title">Sobre mim</h1>
+      </header>
+      <div class="section-body">
+        <div class="my-info">
+          <img class="my-picture" src="/assets/images/lucas.jpg">
+          <div class="personal-info">
+            <ul>
+              <li><span class="field">Nome</span><span class="value">Lucas Vasconcelos</span></li>
+              <li><span class="field">Idade</span><span class="value">32 anos</span></li>
+              <li><span class="field">Naturalidade</span><span class="value">Natal/RN</span></li>
+              <li><span class="field">Telefone</span><span class="value">84 9 8740-4714</span></li>
+              <li><span class="field">E-mail</span><span class="value">eng_cadu@hotmail.com</span></li>
+              <li><span class="field">Idiomas</span><span class="value">Portugês e Inglês</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="text">
+          <h1>Prazer, Lucas Vasconcelos</h1>
+          <p>Olá! Tudo bem? Sou Lucas Vasconcelos, tenho 32 anos e moro em minha cidade "Natal" (o nome da cidade é Natal mesmo, desculpe o trocadilho rs). Pai solteiro de uma linda garotinha de apenas 3 anos, sou uma pessoa extremamente bem humorada e prezo sempre por um clima leve e agradável. Além disso, minha personalidade também possui uma pitada de perfeccionismo, organização e inovação.</p>
+          
+          <h1>Falando de profissão...</h1>
+          <p>Ainda no ensino médio, tive meu primeiro contato com o mundo do software desenvolvendo um sistema para controle de oficina e estoque (Delphi 7) e emissão de NF-e (Java). Após a graduação, atuei no meio acadêmico por alguns anos e também implementei um projeto piloto para gestão de restaurantes. Atualmente, sou Analista de Sistemas e trabalho com um software acadêmico utilizado por diversas Instituições de Ensino Superior em todo o Brasil.</p>
+
+          <h1>Hobbies</h1>
+          <p>Adoro asssitir a um bom espetáculo de stand-up e improviso (recomendo a Cia. Barbixas de Humor). Filmes e andar de patins (especialmente de madrugada) completam meu top 3. Além disso, adoro ouvir músicas e praticar esportes, como tênis, tênis de mesa e futebol.</p>
         </div>
       </div>
-      <section class="profile">
-        <h3 class="title">
-          <span>PERFIL</span>
-          <hr>
-        </h3>
-        <p>{{profile.description}}</p>
-      </section>
-      <section class="contact">
-        <h3 class="title">
-          <span>CONTATO</span>
-          <hr>
-        </h3>
-        <ul class="contact-list">
-          <li class="qrcode"><img src="../assets/images/qrcode.png" alt="www.lucasv.com.br"></li>
-          <li class="address"><span class="icon"><i class="fas fa-map-marker-alt"></i></span>Rua Presidente Quaresma, 954, Alecrim, Natal/RN</li>
-          <li class="email"><span class="icon"><i class="fas fa-envelope-square"></i></span>eng_cadu@hotmail.com</li>
-          <li class="whatsapp"><span class="icon"><i class="fab fa-whatsapp-square"></i></span>84 9 8740-4714</li>
-          <li class="github"><span class="icon"><i class="fab fa-github-square"></i></span><a href="https://github.com/lucasesv">https://github.com/lucasesv</a></li>
-          <li class="linkedin"><span class="icon"><i class="fab fa-linkedin"></i></span><a href="https://www.linkedin.com/in/lucas-vasconcelos-50448189/">https://www.linkedin.com/in/lucas-vasconcelos-50448189/</a></li>
-        </ul>
-      </section>
-    </header>
-
-    <div class="content-wrapper">
-      <div class="career">
-        <section>
-          <h3 class="title">
-            <span>EXPERIÊNCIA</span>
-            <hr>
-          </h3>
-          <ul class="career-list">
-            <li *ngFor="let experience of experiences">
-              <div class="job">
-                <span class="role">{{experience.role}}</span>
-                <span class="date">{{experience.period}}</span>
-              </div>
-              <div class="job-details">
-                <span class="company">{{experience.company}}</span>
-                <p class="description">{{experience.description}}</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="title">
-            <span>EDUCAÇÃO</span>
-            <hr>
-          </h3>
-          <ul class="career-list">
-            <li *ngFor="let education of education">
-              <div class="job">
-                <span class="role">{{education.role}}</span>
-                <span class="date">{{education.period}}</span>
-              </div>
-              <div class="job-details">
-                <span class="company">{{education.company}}</span>
-                <p class="description">{{education.description}}</p>
-              </div>
-            </li>
-          </ul>
-        </section>
+    </section>
+    
+    
+    <section id="section-graduation" *ngIf="activeSection == 'graduation'" [@sectionState]>
+      <header>
+        <span class="header-icon"><i class="fas fa-graduation-cap fa-fw"></i></span><h1 class="header-title">Formação</h1>
+      </header>
+      <div class="section-body">
+        <div id="graduation-container">
+          <div class="graduation-item">
+            <div class="front">
+              <h1 class="course">Curso de Programador Trainee (Delphi)</h1>
+              <span class="institution">SIC Informática</span>
+              <p class="period"><i class="far fa-calendar-alt"></i> 2005</p>
+            </div>
+            <div class="back">
+              <p class="description">Iniciação em programação com ênfase em MS Access e Delphi 7</p>
+            </div>
+          </div>
+          <div class="graduation-item">
+            <div class="front">
+              <h1 class="course"><strong>Laureado</strong> no Curso Técnico de Manutenção de Computadores</h1>
+              <span class="institution">IFRN</span>
+              <p class="period"><i class="far fa-calendar-alt"></i> 2007</p>
+            </div>
+            <div class="back">
+              <p class="description">Montagem e manutenção de computadores e introdução à infraestrutura de redes.</p>
+            </div>
+          </div>
+          <div class="graduation-item">
+            <div class="front">
+              <h1 class="course">Graduação em Engenharia de Computação</h1>
+              <span class="institution">UFRN</span>
+              <p class="period"><i class="far fa-calendar-alt"></i> 2013</p>
+            </div>
+            <div class="back">
+              <p class="description">Engenharia de Computação com ênfase em Automação Industrial</p>
+            </div>
+          </div>
+          <div class="graduation-item">
+            <div class="front">
+              <h1 class="course">Angular - The Complete Guide</h1>
+              <span class="institution">Udemy | Maximilian Schwarzmüller</span>
+              <p class="period"><i class="far fa-calendar-alt"></i> 2019</p>
+            </div>
+            <div class="back">
+              <p class="description">Master Angular 10 (formerly "Angular 2") and build awesome, reactive web apps with the successor of Angular.js</p>
+            </div>
+          </div>
+          <div class="graduation-item">
+            <div class="front">
+              <h1 class="course">Microsserviços com Springboot</h1>
+              <span class="institution">Udemy | in28Minutes</span>
+              <p class="period"><i class="far fa-calendar-alt"></i> 2020</p>
+            </div>
+            <div class="back">
+              <p class="description">Iniciando no mundo de microsserviços com Spring Boot e Spring Cloud</p>
+            </div>
+          </div>
+          <div class="graduation-item">
+            <div class="front">
+              <h1 class="course">Full Cycle Developer</h1>
+              <span class="institution">Code.education (School of Net)</span>
+              <p class="period"><i class="far fa-calendar-alt"></i> 2020 (Em andamento)</p>
+            </div>
+            <div class="back">
+              <p class="description">Full Cycle Developer: da arquitetura de microserviços ao monitoramento em produção</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="skills">
-        <section>
-          <h3 class="title">HARD SKILLS</h3>
-          <ul class="skills">
-            <li *ngFor="let skill of hardSkills">
-              <div class="name">{{skill.name}}</div>
-              <div class="knowledge">
-                <div class="progress-bar">
-                  <div class="progress w{{skill.knowledge}}"></div>
-                </div>
+    </section>
+    
+    <lesv-skills *ngIf="activeSection == 'skills'"></lesv-skills>
+    
+    <section id="section-experience" *ngIf="activeSection == 'experience'" [@sectionState]>
+      <header>
+        <span class="header-icon"><i class="fas fa-book fa-fw"></i></span><h1 class="header-title">Experiência</h1>
+      </header>
+      <div class="section-body">
+        <div id="experience-container">
+          <div id="timeline-container">
+            <div id="timeline"></div>
+            <div class="timeline-content">
+              <div class="experience-item">
+                <h1 class="company">UFRN</h1>
+                <p class="period">2013 - 2013</p>
+                <p class="description"><strong>Estágio</strong> em análise de protocolos de comunicação em ambientes industriais.</p>
+                <div class="marker"></div>
+                <div class="arrow"></div>
               </div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="title">SOFT SKILLS</h3>
-          <ul class="skills">
-            <li *ngFor="let skill of softSkills">
-              <div class="name">{{skill.name}}</div>
-              <div class="knowledge">
-                <div class="progress-bar">
-                  <div class="progress w{{skill.knowledge}}"></div>
-                </div>
+              <div class="experience-item">
+                <h1 class="company">UFRN</h1>
+                <p class="period">2014 - 2014</p>
+                <p class="description"><strong>Pesquisa Científica</strong> sobre protocolos de comunicação via rede elétrica.</p>
+                <div class="marker"></div>
+                <div class="arrow"></div>
               </div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="title">HOBBIES</h3>
-          <ul class="hobbies">
-            <li *ngFor="let hobby of hobbies">
-              <i class="icon {{hobby.faIcon}}"></i>
-            </li>
-          </ul>
-        </section>
+              <div class="experience-item">
+                <h1 class="company">UFRN</h1>
+                <p class="period">2015 - 2016</p>
+                <p class="description"><strong>Engenheiro Supervisor</strong> em projeto de desenvolvimento de software para autocalibração de equipamentos.</p>
+                <div class="marker"></div>
+                <div class="arrow"></div>
+              </div>
+              <div class="experience-item">
+                <h1 class="company">Instituto Metrópole Digital - UFRN</h1>
+                <p class="period">2015 - 2016</p>
+                <p class="description"><strong>Tutor</strong> em diversas turmas do Curso Técnico em Tecnologia da Informação.</p>
+                <div class="marker"></div>
+                <div class="arrow"></div>
+              </div>
+              <div class="experience-item">
+                <h1 class="company">CTGAS-ER</h1>
+                <p class="period">2016 - 2017</p>
+                <p class="description"><strong>Professor e Tutor</strong> em turma de Curso Técnico de Automação Industrial.</p>
+                <div class="marker"></div>
+                <div class="arrow"></div>
+              </div>
+              <div class="experience-item">
+                <h1 class="company">ESIG Software & Consultoria</h1>
+                <p class="period">2018 - Atual</p>
+                <p class="description"><strong>Analista de Sistemas</strong> executando manutenção corretiva e evolutiva em sistemas acadêmicos</p>
+                <div class="marker"></div>
+                <div class="arrow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    
+    <section id="section-contact" *ngIf="activeSection == 'contact'" [@sectionState]>
+      <header>
+        <span class="header-icon"><i class="fas fa-book fa-fw"></i></span><h1 class="header-title">Contato</h1>
+      </header>
+      <div class="section-body">
+        <div id="contact-container">
+          <div id="get-in-touch">
+            <h1>Entre em contato</h1>
+            <h2>TELEFONE</h2>
+            <p class="contact-item"><i class="icon fab fa-whatsapp fa-fw"></i> (84) 9 8740-4714</p>
+            <h2>E-mail</h2>
+            <p class="contact-item"><i class="icon fas fa-envelope fa-fw"></i> eng_cadu@hotmail.com</p>
+            <h2>Endereço</h2>
+            <p class="contact-item"><i class="icon fas fa-map-marker-alt fa-fw"></i> Rua Presidente Quaresma, nº 954, Alecrim, Natal/RN</p>
+          </div>
+          <div id="message-me">
+            <h1>Envie-me uma mensagem</h1>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmitMessage()">
+              <mat-form-field>
+                <input matInput placeholder="Qual seu nome?" formControlName="name">
+                <span matSuffix><i class="fas fa-user"></i></span>
+                <mat-error>Preciso saber seu nome :)</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Qual seu e-mail?" formControlName="from" required>
+                <span matSuffix><i class="fas fa-at"></i></span>
+                <mat-error>Informe um e-mail para que eu possa respondê-lo</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <textarea matInput placeholder="O que gostaria de dizer?" matTextareaAutosize matAutosizeMinRows="3" matAutosizeMaxRows="4" formControlName="message"></textarea>
+                <span matSuffix><i class="fas fa-comments"></i></span>
+                <mat-error>Hummm... Acho que esqueceu da mensagem</mat-error>
+              </mat-form-field>
+              <br>
+              <button type="submit" mat-raised-button color="primary">
+                Enviar
+                <mat-icon aria-label="send icon">send</mat-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-</body>
-</html>
+  
+  <div class="loading-bar" *ngIf="isLoading">
+    <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+  </div>
+</main>

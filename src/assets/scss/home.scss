@@ -1,0 +1,36 @@
+#section-home {
+	align-items: center;
+}
+
+#section-home .home-text {
+	margin-right: 30px;
+}
+
+#section-home .my-name {
+	margin-bottom: 10px;
+	font-size: 2em;
+	color: #4CAF50;
+}
+
+#section-home .my-jobs {
+	position: relative;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	perspective: 500px;
+}
+
+#section-home .my-job {
+	position: absolute;
+	display: inline-block;
+	top: -15px;
+	left: 0px;
+	color: darkblue;
+	opacity: 0;
+	white-space: nowrap;
+}
+
+.hello-img {
+	max-height: 400px;
+}
