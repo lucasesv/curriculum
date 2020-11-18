@@ -92,6 +92,10 @@
 	color: white;
 }
 
+#site-menu > ul > li > .menu-caption {
+	color: $background-color;
+}
+
 #site-header #site-menu > ul > li > .menu-icon {
 	flex-direction: column;
 	margin-right: 10px;

@@ -206,49 +206,8 @@
       </div>
     </section>
     
-    <section id="section-contact" *ngIf="activeSection == 'contact'" [@sectionState]>
-      <header>
-        <span class="header-icon"><i class="fas fa-book fa-fw"></i></span><h1 class="header-title">Contato</h1>
-      </header>
-      <div class="section-body">
-        <div id="contact-container">
-          <div id="get-in-touch">
-            <h1>Entre em contato</h1>
-            <h2>TELEFONE</h2>
-            <p class="contact-item"><i class="icon fab fa-whatsapp fa-fw"></i> (84) 9 8740-4714</p>
-            <h2>E-mail</h2>
-            <p class="contact-item"><i class="icon fas fa-envelope fa-fw"></i> eng_cadu@hotmail.com</p>
-            <h2>Endereço</h2>
-            <p class="contact-item"><i class="icon fas fa-map-marker-alt fa-fw"></i> Rua Presidente Quaresma, nº 954, Alecrim, Natal/RN</p>
-          </div>
-          <div id="message-me">
-            <h1>Envie-me uma mensagem</h1>
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmitMessage()">
-              <mat-form-field>
-                <input matInput placeholder="Qual seu nome?" formControlName="name">
-                <span matSuffix><i class="fas fa-user"></i></span>
-                <mat-error>Preciso saber seu nome :)</mat-error>
-              </mat-form-field>
-              <mat-form-field>
-                <input matInput placeholder="Qual seu e-mail?" formControlName="from" required>
-                <span matSuffix><i class="fas fa-at"></i></span>
-                <mat-error>Informe um e-mail para que eu possa respondê-lo</mat-error>
-              </mat-form-field>
-              <mat-form-field>
-                <textarea matInput placeholder="O que gostaria de dizer?" matTextareaAutosize matAutosizeMinRows="3" matAutosizeMaxRows="4" formControlName="message"></textarea>
-                <span matSuffix><i class="fas fa-comments"></i></span>
-                <mat-error>Hummm... Acho que esqueceu da mensagem</mat-error>
-              </mat-form-field>
-              <br>
-              <button type="submit" mat-raised-button color="primary">
-                Enviar
-                <mat-icon aria-label="send icon">send</mat-icon>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+    <lesv-contact *ngIf="activeSection == 'contact'"></lesv-contact>
+
   </div>
   
   <div class="loading-bar" *ngIf="isLoading">

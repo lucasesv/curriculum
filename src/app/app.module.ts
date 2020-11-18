@@ -13,12 +13,14 @@ import { SkillsComponent } from './skills/skills.component';
 import { SkillComponent } from './skills/skill/skill.component';
 import { MailerService } from './mailer.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillsComponent,
-    SkillComponent
+    SkillComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
