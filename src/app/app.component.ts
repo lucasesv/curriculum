@@ -59,7 +59,7 @@ export class AppComponent {
   title = 'Lucas Vasconcelos';
 
 	menuOpened = false;
-	activeSection = 'contact';
+	activeSection = 'about-me';
 	state = 'normal';
 
 	contactForm: FormGroup;
