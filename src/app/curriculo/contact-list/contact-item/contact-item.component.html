@@ -1,0 +1,7 @@
+<li>
+  <span class="icon"><i class="{{contact.icon}}"></i></span>
+  <a href="{{contact.url}}" class="link" *ngIf="contact.url">
+    <span>{{contact.description}}</span>
+  </a>
+  <span *ngIf="!contact.url">{{contact.description}}</span>
+</li>

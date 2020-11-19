@@ -1,22 +1,16 @@
-@import './assets/styles/header.scss';
-
 * {
   box-sizing: border-box;
   font-family: 'Titillium Web', sans-serif;
-  color: #323234;
   -webkit-print-color-adjust: exact;
 }
 
 body {
   background-color: #313131;
+  color: #323234;
   margin: 0px;;
 }
 
-section {
-  margin-bottom: 40px;
-}
-
-ul {
+ul, p {
   padding: 0px;
   margin: 0px;
 }
@@ -27,173 +21,5 @@ li {
 
 a {
   text-decoration: none;
-  color: #169dc5;
-  /* font-weight: bold; */
-}
-
-.site-wrapper {
-  /* padding-top: 20px; */
-  background-color: #e6e6e6;
-  max-width: 1000px;
-  /* border: 1px solid grey; */
-  margin: auto;
-  width: 210mm;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-
-
-.content-wrapper {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  column-gap: 40px;
-  /* padding-left: 40px;
-  padding-right: 40px; */
-}
-
-section p {
-  margin: 0px;
-}
-
-section .title {
-  margin: 0px 0px 15px 0px;
-  color: #323234;
-  font-size: 1.6em;
-  display: flex;
-  align-items: center;
-}
-
-section .title hr {
-  width: 100%;
-  height: 1px;
-  margin-left: 50px;
-  border: solid 1px grey;
-  border-top: none;
-}
-
-section ul.career-list li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-section ul.career-list li .job {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 30px;
-  text-align: right;
-  min-width: 200px;
-  max-width: 200px;
-}
-
-section ul.career-list li .job .role {
-  display: block;
-  color: #169dc5;
-  font-weight: bold;
-}
-
-section ul.career-list li .job-details {
-
-}
-
-section ul.career-list li .job-details .company {
-  font-weight: bold;
-}
-
-section ul.career-list li .job-details .description {
-  margin-top: 0px;
-  font-style: italic;
-}
-
-section ul.skills li {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-section ul.skills li .name {
-  /* flex: 45%; */
-  font-weight: bold;
-}
-
-section ul.skills li .knowledge {
-  /* flex: 55%; */
-  /* width: 100%; */
-  display: flex;
-  align-items: center;
-}
-
-section ul.skills li .knowledge .progress-bar {
-  width: 100%;
-  background-color: #6b6b6b;
-}
-
-section ul.skills li .knowledge .progress-bar .progress {
-  height: 12px;
-  background-color: #169dc5;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w10 {
-  width: 10%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w20 {
-  width: 20%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w30 {
-  width: 30%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w40 {
-  width: 40%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w50 {
-  width: 50%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w60 {
-  width: 60%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w70 {
-  width: 70%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w80 {
-  width: 80%;
-}
-
-section ul.skills li .knowledge .progress-bar .progress.w90 {
-  width: 90%;
-}
-
-section ul.hobbies  {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-section ul.hobbies li {
-  flex: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-section ul.hobbies li .icon {
-  /* flex: 50%; */
-  font-size: 4em;
-  color: #169dc5;
-}
-
-
-@media print {
-  .site-wrapper {
-    height: 200vh;
-    background-color: #e6e6e6;
-  }
+  color: #007192;
 }

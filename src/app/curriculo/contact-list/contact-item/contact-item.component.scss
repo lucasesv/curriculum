@@ -1,0 +1,17 @@
+li {
+  margin-bottom: 5px;
+}
+
+li .icon {
+  width: 24px;
+  margin-right: 5px;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li .icon i {
+  color: #169dc5;
+  font-size: 1.2em;
+}

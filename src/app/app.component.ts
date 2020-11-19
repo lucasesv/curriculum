@@ -11,8 +11,6 @@ import data from './data.mock';
 export class AppComponent {
   title = 'curriculo-new';
 
-  profile: Types.Profile = data.profile;
-  experiences: Array<Types.Experience> = data.experiences;
   education: Array<Types.Experience> = data.education;
   hardSkills: Array<Types.Skill> = data.hardSkills;
   softSkills: Array<Types.Skill> = data.softSkills;
