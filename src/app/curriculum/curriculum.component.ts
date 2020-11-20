@@ -3,11 +3,11 @@ import data from '../data.mock';
 import * as Types from '../types';
 
 @Component({
-  selector: 'lv-curriculo',
-  templateUrl: './curriculo.component.html',
-  styleUrls: ['./curriculo.component.scss']
+  selector: 'lv-curriculum',
+  templateUrl: './curriculum.component.html',
+  styleUrls: ['./curriculum.component.scss']
 })
-export class CurriculoComponent implements OnInit {
+export class CurriculumComponent implements OnInit {
 
   profile: Types.Profile = data.profile;
   experiences: Array<Types.Experience> = data.experiences;

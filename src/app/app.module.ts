@@ -11,16 +11,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SkillsComponent } from './skills/skills.component';
 import { SkillComponent } from './skills/skill/skill.component';
-import { MailerService } from './mailer.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
-import { CurriculoComponent } from './curriculo/curriculo.component';
-import { ExperienceItemComponent } from './curriculo/experience-list/experience-item/experience-item.component';
-import { ExperienceListComponent } from './curriculo/experience-list/experience-list.component';
-import { SkillListComponent } from './curriculo//skill-list/skill-list.component';
-import { SkillItemComponent } from './curriculo/skill-list/skill-item/skill-item.component';
-import { ContactListComponent } from './curriculo/contact-list/contact-list.component';
-import { ContactItemComponent } from './curriculo/contact-list/contact-item/contact-item.component';
+import { CurriculumComponent } from './curriculum/curriculum.component';
+import { ExperienceItemComponent } from './curriculum/experience-list/experience-item/experience-item.component';
+import { ExperienceListComponent } from './curriculum/experience-list/experience-list.component';
+import { SkillListComponent } from './curriculum//skill-list/skill-list.component';
+import { SkillItemComponent } from './curriculum/skill-list/skill-item/skill-item.component';
+import { ContactListComponent } from './curriculum/contact-list/contact-list.component';
+import { ContactItemComponent } from './curriculum/contact-list/contact-item/contact-item.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 
@@ -30,7 +29,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
     SkillsComponent,
     SkillComponent,
     ContactComponent,
-    CurriculoComponent,
+    CurriculumComponent,
     ExperienceItemComponent,
     ExperienceListComponent,
     SkillListComponent,
