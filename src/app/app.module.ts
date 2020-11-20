@@ -21,6 +21,8 @@ import { SkillListComponent } from './curriculo//skill-list/skill-list.component
 import { SkillItemComponent } from './curriculo/skill-list/skill-item/skill-item.component';
 import { ContactListComponent } from './curriculo/contact-list/contact-list.component';
 import { ContactItemComponent } from './curriculo/contact-list/contact-item/contact-item.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +36,14 @@ import { ContactItemComponent } from './curriculo/contact-list/contact-item/cont
     SkillListComponent,
     SkillItemComponent,
     ContactListComponent,
-    ContactItemComponent
+    ContactItemComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
@@ -48,7 +52,7 @@ import { ContactItemComponent } from './curriculo/contact-list/contact-item/cont
     MatSnackBarModule,
     MatProgressBarModule
   ],
-  providers: [MailerService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

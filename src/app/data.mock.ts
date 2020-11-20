@@ -4,7 +4,7 @@ export const profile: Types.Profile = {
   description: 'Olá! Nascido, criado e residente em Natal/RN, sou uma pessoa bem humorada, flexível e aberta a mudanças. Ainda no ensino médio, tive meu primeiro contato com o mundo do software desenvolvendo um sistema para controle de oficina e estoque (Delphi 7) e emissão de NF-e (Java). Após a graduação, atuei no meio acadêmico por alguns anos. Também implementei um projeto piloto para gestão de restaurantes. Atualmente, sou Analista de Sistemas e trabalho com um software acadêmico utilizado por diversas Instituições de Ensino Superior em todo o Brasil.'
 };
 
-export const contact: Array<Types.Contact> = [
+export const contacts: Array<Types.Contact> = [
   {
     description: 'Rua Presidente Quaresma, 954, Alecrim, Natal/RN',
     url: null,
@@ -189,7 +189,7 @@ const hobbies: Array<Types.Hobby> = [
 
 const data = {
   profile,
-  contact,
+  contacts,
   experiences,
   education,
   hardSkills,

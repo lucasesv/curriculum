@@ -1,4 +1,4 @@
-import { Component, OnInit, Type } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import data from '../data.mock';
 import * as Types from '../types';
 
@@ -11,13 +11,25 @@ export class CurriculoComponent implements OnInit {
 
   profile: Types.Profile = data.profile;
   experiences: Array<Types.Experience> = data.experiences;
-  contacts: Array<Types.Contact> = data.contact;
+  contacts: Array<Types.Contact> = data.contacts;
   education: Array<Types.Experience> = data.education;
   hardSkills: Array<Types.Skill> = data.hardSkills;
-  softSkills: Array<Types.Skill> = data.softSkills;
+  softSkills: Array<Types.Skill>;
   hobbies: Array<Types.Hobby> = data.hobbies;
 
-  constructor() { }
+  constructor() {
+    this.loadSoftSkills();
+  }
+
+  loadSoftSkills() {
+    const softSkills = data.softSkills.filter(skill => {
+      return (skill.name === 'Equipe')
+        || (skill.name === 'Motivação')
+        || (skill.name === 'Comunicação')
+        || (skill.name === 'Liderança');
+    });
+    this.softSkills = softSkills;
+  }
 
   ngOnInit(): void {
   }
