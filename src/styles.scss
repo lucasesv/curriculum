@@ -1,25 +1,11 @@
+@import './assets/styles/curriculum.scss';
+
 * {
   box-sizing: border-box;
-  font-family: 'Titillium Web', sans-serif;
-  -webkit-print-color-adjust: exact;
 }
 
 body {
-  background-color: #313131;
-  color: #323234;
-  margin: 0px;;
-}
-
-ul, p {
-  padding: 0px;
+  font-family: 'Titillium Web', sans-serif;
+  background-color: #20222b;
   margin: 0px;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #007192;
 }
