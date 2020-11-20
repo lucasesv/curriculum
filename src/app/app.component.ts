@@ -1,20 +1,13 @@
 import { Component } from '@angular/core';
-import * as Types from './types';
-import data from './data.mock';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'curriculo-new';
-
-  education: Array<Types.Experience> = data.education;
-  hardSkills: Array<Types.Skill> = data.hardSkills;
-  softSkills: Array<Types.Skill> = data.softSkills;
-  hobbies: Array<Types.Hobby> = data.hobbies;
+  title = 'Lucas Vasconcelos';
 
   constructor () { }
 }
