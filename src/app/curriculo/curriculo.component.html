@@ -1,0 +1,67 @@
+<div class="site-wrapper curriculum">
+  <header>
+    <div class="avatar">
+      <img class="photo" src="../assets/images/photo1.jpg" alt="Lucas Vasconcelos">
+      <div class="name-wrapper">
+        <h3 class="name">LUCAS VASCONCELOS</h3>
+        <span class="role">Analista de Sistemas</span>
+      </div>
+    </div>
+    <section class="profile">
+      <h3 class="title">
+        <span>PERFIL</span>
+        <hr>
+      </h3>
+      <p>{{profile.description}}</p>
+    </section>
+  </header>
+
+  <section class="contact">
+    <h3 class="title">
+      <span>CONTATO</span>
+      <hr>
+    </h3>
+    <div class="body">
+      <img class="qrcode" src="../assets/images/qrcode.png" alt="www.lucasv.com.br">
+      <lv-contact-list [contacts]="contacts"></lv-contact-list>
+    </div>
+  </section>
+
+  <div class="content-wrapper">
+    <div class="career">
+      <section>
+        <h3 class="title">
+          <span>EXPERIÊNCIA</span>
+          <hr>
+        </h3>
+        <lv-experience-list [experiences]="experiences"></lv-experience-list>
+      </section>
+      <section>
+        <h3 class="title">
+          <span>EDUCAÇÃO</span>
+          <hr>
+        </h3>
+        <lv-experience-list [experiences]="education"></lv-experience-list>
+      </section>
+    </div>
+    
+    <div class="skills">
+      <section>
+        <h3 class="title">HARD SKILLS</h3>
+        <lv-skill-list [skills]="hardSkills"></lv-skill-list>
+      </section>
+      <section>
+        <h3 class="title">SOFT SKILLS</h3>
+        <lv-skill-list [skills]="softSkills"></lv-skill-list>
+      </section>
+      <section>
+        <h3 class="title">HOBBIES</h3>
+        <ul class="hobbies">
+          <li *ngFor="let hobby of hobbies">
+            <i class="icon {{hobby.faIcon}}"></i>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

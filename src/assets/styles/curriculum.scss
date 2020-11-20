@@ -1,0 +1,18 @@
+.curriculum {
+  -webkit-print-color-adjust: exact;
+  color: #323234;
+  
+  ul, p {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #007192;
+  }
+}

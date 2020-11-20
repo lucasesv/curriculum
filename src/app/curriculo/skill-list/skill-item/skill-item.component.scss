@@ -1,0 +1,63 @@
+li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+li .name {
+  /* flex: 45%; */
+  font-weight: bold;
+}
+
+li .knowledge {
+  /* flex: 55%; */
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+}
+
+li .knowledge .progress-bar {
+  width: 100%;
+  background-color: #6b6b6b;
+}
+
+li .knowledge .progress-bar .progress {
+  height: 12px;
+  background-color: #169dc5;
+}
+
+li .knowledge .progress-bar .progress.w10 {
+  width: 10%;
+}
+
+li .knowledge .progress-bar .progress.w20 {
+  width: 20%;
+}
+
+li .knowledge .progress-bar .progress.w30 {
+  width: 30%;
+}
+
+li .knowledge .progress-bar .progress.w40 {
+  width: 40%;
+}
+
+li .knowledge .progress-bar .progress.w50 {
+  width: 50%;
+}
+
+li .knowledge .progress-bar .progress.w60 {
+  width: 60%;
+}
+
+li .knowledge .progress-bar .progress.w70 {
+  width: 70%;
+}
+
+li .knowledge .progress-bar .progress.w80 {
+  width: 80%;
+}
+
+li .knowledge .progress-bar .progress.w90 {
+  width: 90%;
+}

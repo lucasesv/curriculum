@@ -33,7 +33,7 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 $primary-color: #27c74f;
 $background-color: #20222b;
 
-
+@import './assets/styles/curriculum.scss';
 @import './assets/scss/transitions.scss';
 @import './assets/scss/header.scss';
 @import './assets/scss/main.scss';

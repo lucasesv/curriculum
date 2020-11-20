@@ -1,0 +1,120 @@
+.site-wrapper {
+  background-color: #e6e6e6;
+  max-width: 1000px;
+  margin: auto;
+  width: 210mm;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 40px;
+}
+
+header {
+  display: grid;
+  grid: 'avatar profile';
+  position: relative;
+
+  .avatar {
+    grid-area: avatar;
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+    margin-left: -40px;
+    margin-right: 40px;
+
+    .photo {
+      max-width: 250px;
+      background-size: cover;
+    }
+  }
+
+  .name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    background-color: #169dc5;
+    opacity: 0.8;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    
+    .name {
+    font-weight: bold;
+    margin: 0px;
+    font-size: 20px;
+    line-height: 1em;
+    color: white;
+    }
+    
+    .role {
+      color: white;
+    }
+  }
+
+  .profile {
+    grid-area: profile;
+  }
+}
+
+section {
+  margin-bottom: 40px;
+
+  .title {
+    margin: 0px 0px 15px 0px;
+    color: #323234;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .title hr {
+    width: 100%;
+    height: 1px;
+    margin-left: 50px;
+    border: solid 1px grey;
+    border-top: none;
+  }
+}
+
+.contact {
+  .body {
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+  }
+     
+  .qrcode {
+    display: flex;
+    margin-right: 20px;
+    max-height: 140px;
+  }
+}
+
+ul.hobbies  {
+  display: flex;
+  flex-wrap: wrap;
+  
+  li {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  li .icon {
+    font-size: 4em;
+    color: #169dc5;
+  }
+}
+
+@media print {
+  .site-wrapper {
+    height: 200vh;
+    background-color: #e6e6e6;
+  }
+}

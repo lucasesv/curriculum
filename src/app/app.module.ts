@@ -14,13 +14,27 @@ import { SkillComponent } from './skills/skill/skill.component';
 import { MailerService } from './mailer.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
+import { CurriculoComponent } from './curriculo/curriculo.component';
+import { ExperienceItemComponent } from './curriculo/experience-list/experience-item/experience-item.component';
+import { ExperienceListComponent } from './curriculo/experience-list/experience-list.component';
+import { SkillListComponent } from './curriculo//skill-list/skill-list.component';
+import { SkillItemComponent } from './curriculo/skill-list/skill-item/skill-item.component';
+import { ContactListComponent } from './curriculo/contact-list/contact-list.component';
+import { ContactItemComponent } from './curriculo/contact-list/contact-item/contact-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillsComponent,
     SkillComponent,
-    ContactComponent
+    ContactComponent,
+    CurriculoComponent,
+    ExperienceItemComponent,
+    ExperienceListComponent,
+    SkillListComponent,
+    SkillItemComponent,
+    ContactListComponent,
+    ContactItemComponent
   ],
   imports: [
     BrowserModule,
