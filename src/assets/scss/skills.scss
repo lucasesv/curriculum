@@ -1,0 +1,147 @@
+#skills-container > ul#skills-menu {
+	display: flex;
+	justify-content: center;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+#skills-container > ul#skills-menu > li {
+	padding: 0px 20px;
+	color: rgba(255, 255, 255, 0.6);
+	border-bottom: solid 1px rgba(255,255,255,0.2);
+	transition: all .35s ease;
+}
+#skills-container > #skills-menu > li:hover {
+	color: $primary-color;
+	cursor: pointer;
+}
+#skills-container > #skills-menu > li.active {
+	border-bottom: solid 2px $primary-color;
+	color: $primary-color;
+}
+
+#skill-types {
+	position: relative;
+	flex: 1;
+}
+
+#skill-types > .skill-type {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 0px 20px 20px 20px;
+	width: 100%;
+	background-color: $background-color;
+}
+#skill-types > .skill-type > h3 {
+	display: none;
+}
+#skill-types > .skill-type > ul.skill-list {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#skill-types > .skill-type > .skill-list > li {
+	display: block;
+}
+
+#skill-types > .skill-type > .skill-list > li > .name {
+	margin-bottom: 5px;
+}
+
+#skill-types > .skill-type > .skill-list > li > .rating {
+	color: $primary-color;
+}
+.background-effect {
+	display: none;
+}
+.rating .rating-background {
+	position: absolute;
+}
+
+
+@media screen and (min-width: 950px) {
+
+	#skills-container {
+		display: flex;
+		align-content: center;
+	}
+
+	#skills-container > ul#skills-menu {
+		display: block;
+		margin: 50px 0px 50px 0px;
+		border: solid 1px rgba(255,255,255,0.2);
+	}
+	#skills-container > ul#skills-menu > li {
+		padding: 20px 60px 20px 20px;
+	}
+	#skills-container > #skills-menu > li:last-child {
+		border-bottom: solid 1px rgba(255,255,255,0.2);
+	}
+	#skills-container > #skills-menu > li:hover {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	#skills-container > #skills-menu > li.active {
+		padding-left: 40px;
+		padding-right: 40px;
+		border-bottom: solid 1px rgba(255,255,255,0.2);
+	}
+
+	#skill-types {
+		display: flex;
+		margin: 0px 0px 0px 50px;
+	}
+
+	#skill-types > .skill-type {
+		top: 22px;
+		left: 0px;
+		min-height: 350px;
+		border: solid 1px rgba(255,255,255,0.2);
+		box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.4);
+		transition: transform .35s ease;
+		z-index: 1;
+	}
+	#skill-types > .skill-type > h3 {
+		display: block;
+		margin: 0px -20px 20px -20px;
+		padding: 15px 20px;
+		text-align: center;
+		font-size: 1.3em;
+		font-weight: normal;
+		border-bottom: solid 1px rgba(255,255,255,0.2);
+	}
+	#skill-types > .skill-type > ul.skill-list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	#skill-types > .skill-type > .skill-list > li {
+		width: 33.33%;
+	}
+
+	#skill-types > .skill-type > .skill-list > li > .name {
+		margin-bottom: 5px;
+	}
+
+	#skill-types > .skill-type > .skill-list > li > .rating {
+		color: $primary-color;
+	}
+
+
+	.background-effect {
+		display: block;
+		z-index: 0 !important;
+	    transform: scale(0.75) translateY(-90px);
+	    cursor: pointer;
+	    box-shadow: none !important;
+	}
+	.background-effect:hover {
+	    transform: scale(0.75) translateY(-100px);
+	}
+	.rating .rating-background {
+		position: absolute;
+	}
+}

@@ -1,0 +1,58 @@
+#section-about-me .section-body {
+	padding: 0px 20px 20px 20px;
+}
+#section-about-me .my-picture {
+	margin-bottom: 7px;
+	padding: 2px;
+	height: 128px;
+	border: solid 1px #eee;
+}
+
+#section-about-me .personal-info > ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+#section-about-me .personal-info > ul > li {
+	font-size: 14px;
+}
+#section-about-me .personal-info > ul > li > .field {
+	margin-right: 20px;
+}
+#section-about-me .personal-info > ul > li > .value {
+	color: $primary-color;
+}
+
+#section-about-me .text {
+	margin-top: 40px;
+}
+#section-about-me .text > h1 {
+	margin-top: 0px;
+	font-size: 16px;
+	font-weight: 400;
+	color: $primary-color;
+}
+
+#section-about-me .text > p {
+	font-size: 13px;
+}
+
+
+@media screen and (min-width: 950px) {
+
+	#section-about-me .section-body {
+		display: flex;
+		padding: 0px;
+	}
+	#section-about-me .my-info {
+		float: left;
+		margin-right: 40px;
+	}
+	#section-about-me .my-picture {
+		height: 256px;
+	}
+
+	#section-about-me .text {
+		margin-top: 0px;
+	}
+}
